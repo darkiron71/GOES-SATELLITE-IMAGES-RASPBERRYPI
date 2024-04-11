@@ -24,7 +24,7 @@ Raspberry pi - Mine is running on a 3B but should work with anything newer:
 # Mounting Options & Weather Proofing
 I used a outdoor enclosure met for a sprinkler timer, but any outdoor weatherproof enclosure should work. Make sure there is enough room for the raspberrypi, and power cables. 
 
-You can use something like this: https://amzn.to/3xwXNWI -- keep in mind some of these you may need to drill a hole in the bottom to run the power cable through. 
+You can use something like this: https://amzn.to/3xwXNWl -- keep in mind some of these you may need to drill a hole in the bottom to run the power cable through. 
 ![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Outdoor%20enclosure.jpg)
 ![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Outdoor%20enclosure%20screen.jpg)
 

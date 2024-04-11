@@ -729,3 +729,8 @@ If you have it password protected, you may need to pass it with additional argum
 
     sudo mount -t cifs //server/share /mnt/abc -o user=user,pass=password,dom=domain
 
+# Captured Data & Images
+Below are some examples of the images and NOAA weather data you will receive after some time of letting this run. 
+
+Images here: 
+

@@ -681,11 +681,11 @@ With goesrecv running in a screen, we can now start up your LCD screen session t
 
 You should now be back at the main terminal. Change directories to where you save the print_screen.py. Open a new screen. This is where we will run our LCD session. 
 
-    screen -S print_screen
+    screen -S screen_print
 
 Now in the new screen start the program:
 
-    python3 print_screen.py
+    python3 screen_print.py
 
 As long as everything worked, you should now see the goesrecv screen termianl output scrolling on your LCD dispaly. The Python code can be modified to any screen session name you want if you want it to show something different. Now detach from that screen.
 

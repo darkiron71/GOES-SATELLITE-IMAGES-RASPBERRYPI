@@ -686,6 +686,21 @@ As long as everything worked, you should now see the goesrecv screen termianl ou
 
     Ctrl+a+d
 
+# Mount a NAS Drive (Optional)
+Install dependencies
+    
+    apt-get install  samba-common smbclient samba-common-bin smbclient  cifs-utils
+
+Then, create a local directory and mount the remote share:
+  
+    mkdir /mnt/abc
+    sudo mount -t cifs //server/share /mnt/abc
+    
+If you have it password protected, you may need to pass it with additional arguments
+
+    sudo mount -t cifs //server/share /mnt/abc -o user=user,pass=password,dom=domain
+    
+
 # Capture Packets and Convert To Images
 With the goesrecv screen running you now open another screen session for goesproc 
 
@@ -714,20 +729,6 @@ If for whatever reason you need to reattach to a screen session you can re-attac
     screen -ls 
     #Reattach the screen 
     screen -r "screenname"
-  
-# Mount a NAS Drive (Optional)
-Install dependencies
-    
-    apt-get install  samba-common smbclient samba-common-bin smbclient  cifs-utils
-
-Then, create a local directory and mount the remote share:
-  
-    mkdir /mnt/abc
-    sudo mount -t cifs //server/share /mnt/abc
-    
-If you have it password protected, you may need to pass it with additional arguments
-
-    sudo mount -t cifs //server/share /mnt/abc -o user=user,pass=password,dom=domain
 
 # Captured Data & Images
 Below are some examples of the images and NOAA weather data you will receive after some time of letting this run. 

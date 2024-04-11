@@ -10,6 +10,7 @@ USB Extenders (Optional) - Depends on your set-up (Kit includes one)
 sma rf cable (Kit comes with this...depending how far you are from your antenna, you may or may not need this extension)
 
 THIS Antenna KIT CAN BE FOUND HERE: https://amzn.to/4cWtPLJ
+![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Sat%20Dish.jpg)
 
 Tripod - https://amzn.to/3Q0be7o
 
@@ -24,8 +25,12 @@ Raspberry pi - Mine is running on a 3B but should work with anything newer:
 I used a outdoor enclosure met for a sprinkler timer, but any outdoor weatherproof enclosure should work. Make sure there is enough room for the raspberrypi, and power cables. 
 
 You can use something like this: https://amzn.to/3xwXNWI -- keep in mind some of these you may need to drill a hole in the bottom to run the power cable through. 
+![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Outdoor%20enclosure.jpg)
+![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Outdoor%20enclosure%20screen.jpg)
 
 Make sure rf and USB connection points are weather proofed as well. I used these ones: https://amzn.to/3VYGEPp
+
+![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Weather%20connector.jpg)
 
 The SAW Bird has an external USB port so be sure to cover that with tape if not being used. 
 
@@ -722,7 +727,10 @@ Writing: /home/pi/goes/./goes16/fd/ch02/2020-05-27/GOES16_FD_CH02_20200527T14001
 Writing: /home/pi/goes/./goes16/fd/fc/2020-05-27/GOES16_FD_FC_20200527T140016Z.jpg (took 1.981s)
 
 
-You should now be able to find these new directories located in the folder you are running the program. Be sure to detach from this screen first if you are viewing these from the pi itself. You can detach with Ctrl+a+d
+You should now be able to find these new directories located in the folder you are running the program.
+![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Directories.jpg)
+
+Be sure to detach from this screen first if you are viewing these from the pi itself. You can detach with Ctrl+a+d
 If for whatever reason you need to reattach to a screen session you can re-attach by:
 
     #Find the screen name

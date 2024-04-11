@@ -55,9 +55,9 @@ Follow this guide to install the necessary drivers and connect GPIO pins correct
    
  Be sure to download the screen_print.py python script to display antenna data to LCD from the repository.
 
-    Link here:
+    Link here: https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/screen_print.py
  Be sure to make it executable 
-	sudo chmod +x "file_name".py
+	sudo chmod +x "screen_print".py
 			
 Install Geostools and Goesproc on the raspbery pi: (THIS INFO COMES FROM: https://usradioguy.com/programming-a-pi-for-goestools/) The info below is just copied from their page!
 
@@ -733,6 +733,9 @@ If for whatever reason you need to reattach to a screen session you can re-attac
 # Captured Data & Images
 Below are some examples of the images and NOAA weather data you will receive after some time of letting this run. 
 
-Images here: 
+Example Images here: 
 ![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Earth%20Image.jpg)
+![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/NWS%20Images.gif)
+![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Weather.jpg)
+
 

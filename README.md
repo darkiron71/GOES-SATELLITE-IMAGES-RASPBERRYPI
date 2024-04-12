@@ -7,7 +7,7 @@ SAWbird + GOES LNA
 
 USB Extenders (Optional) - Depends on your set-up (Kit includes one)
 
-sma rf cable (Kit comes with this...depending how far you are from your antenna, you may or may not need this extension)
+sma rf cable (Kit comes with this...depending on how far you are from your antenna, you may or may not need this extension)
 
 THIS Antenna KIT CAN BE FOUND HERE: https://amzn.to/4cWtPLJ
 ![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Sat%20Dish.jpg)
@@ -16,19 +16,19 @@ Tripod - https://amzn.to/3Q0be7o
 
 LCD Screen (Optional) - If you want to view the live Antenna Data. https://amzn.to/43WNnv3
 
-Raspberry pi - Mine is running on a 3B but should work with anything newer:
+Raspberry Pi - Mine is running on a 3B but should work with anything newer:
 
-  Raspberry pi 4 starter kit: https://amzn.to/4cMun6R
-  Raspberry pi 3b starter kit: https://amzn.to/3PXJwZ6
+  Raspberry Pi 4 starter kit: https://amzn.to/4cMun6R
+  Raspberry Pi 3b starter kit: https://amzn.to/3PXJwZ6
 
 # Mounting Options & Weather Proofing
-I used a outdoor enclosure met for a sprinkler timer, but any outdoor weatherproof enclosure should work. Make sure there is enough room for the raspberrypi, and power cables. 
+I used an outdoor enclosure for a sprinkler timer, but any outdoor weatherproof enclosure should work. Make sure there is enough room for the Raspberry Pi and power cables. 
 
 You can use something like this: https://amzn.to/3xwXNWl -- keep in mind some of these you may need to drill a hole in the bottom to run the power cable through. 
 ![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Outdoor%20enclosure.jpg)
 ![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Outdoor%20enclosure%20screen.jpg)
 
-Make sure rf and USB connection points are weather proofed as well. I used these ones: https://amzn.to/3VYGEPp
+Make sure RF and USB connection points are weatherproofed as well. I used these: https://amzn.to/3VYGEPp
 
 ![Alt Text](https://github.com/darkiron71/GOES-SATELLITE-IMAGES-RASPBERRYPI/blob/main/Weather%20connector.jpg)
 
@@ -36,7 +36,7 @@ The SAW Bird has an external USB port so be sure to cover that with tape if not 
 
 # Software Requirements 
 
-Update raspberry pi - make sure you can access raspberry pi via ssh as you will want to run it headless. Recommend runnning raspberry pi OS lite.
+Update Raspberry Pi - make sure you can access Raspberry Pi via ssh as you will want to run it headless. Recommend running Raspberry Pi OS lite.
 
 	sudo apt update 
 	sudo apt upgrade
@@ -64,7 +64,7 @@ Follow this guide to install the necessary drivers and connect GPIO pins correct
  Be sure to make it executable 
 	sudo chmod +x "screen_print".py
 			
-Install Geostools and Goesproc on the raspbery pi: (THIS INFO COMES FROM: https://usradioguy.com/programming-a-pi-for-goestools/) The info below is just copied from their page!
+Install Geostools and Goesproc on the raspberry pi: (THIS INFO COMES FROM: https://usradioguy.com/programming-a-pi-for-goestools/) The info below is just copied from their page!
 
 
 You can follow their guide directly on their website here, but I will have the same commands listed below:
@@ -107,7 +107,7 @@ Install goestools
     cd build
     cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
 
-Make: This will take a while on a raspberry pi
+Make: This will take a while on a Raspberry Pi
 
     sudo make -j2 install
 
@@ -659,20 +659,20 @@ Modify or replace the Goesproc-goesr.conf file located in the /usr/share/goestoo
       path = "/usr/share/goestools/ne/ne_50m_admin_1_states_provinces_lakes.json"
 
 # Getting a Satellite Connection
-Now that you have updated your config file lets get a your satellite dish locked in. First thing you want to do if find where the satellite you want to connect to is located. Good tool to use is https://www.dishpointer.com
-This will help you find the right direction and tilt is required for your antenna placement. The satellite I connected to was GOES-16. 
-Once you have your antenna in the direction as specified by dishpointer, you will need to start up goesrecv. We will run this is a screen session. 
+Now that you have updated your config file let's get your satellite dish locked in. The first thing you want to do is find where the satellite you want to connect to is located. A good tool to use is https://www.dishpointer.com
+This will help you find the right direction and tilt required for your antenna placement. The satellite I connected to was GOES-16. 
+Once you have your antenna in the direction specified by the dish pointer website, you will need to start up goesrecv. We will run this as a screen session. 
 
     screen -S goesrecv
 
-You should now be in a new termianl screen session. Next run the goesrecv program. 
+You should now be in a new terminal screen session. Next, run the goesrecv program. 
 
     goesrecv -v -i 1 -c ~/goesrecv.conf
 
 ![alt text](https://usradioguy.com/wp-content/uploads/2020/05/ViterbiAverage-1.jpg)
 
 
-Anything below 300 for vit avg should be fine. The adjustments have to be very percise but once locked in it will work great. Try moving your antenna 1-2 inches at a time while monitoring the vit(avg). Once you have your antenna placement set, make sure to lock your antenna into place. 
+Anything below 300 for vit avg should be fine. The adjustments have to be very precise but once locked in it will work great. Try moving your antenna 1-2 inches at a time while monitoring the vit(avg). Once you have your antenna placement set, make sure to lock your antenna into place. 
 
 # Monitor goesrecv on LCD Screen (Optional)
 With goesrecv running in a screen, we can now start up your LCD screen session to monitor this connection. Detach the previous screen by doing the following: 
@@ -711,7 +711,7 @@ With the goesrecv screen running you now open another screen session for goespro
 
     screen -S goesproc
 
-Now change it's important that you change directories to wherever you want the images to be stored. For me I mounted a NAS to store my images.
+Now you must change directories to wherever you want the images to be stored. For me, I mounted a NAS to store my images.
 
     cd /your/storage/location
     sudo goesproc -c /usr/share/goestools/goesproc-goesr.conf -m packet --subscribe tcp://127.0.0.1:5004
